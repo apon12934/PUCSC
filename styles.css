@@ -656,20 +656,31 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
-    background: rgba(10, 22, 40, 0.5);
+    background: #D0E1FC;
     border-radius: 20px;
     border: 2px solid rgba(0, 217, 255, 0.2);
 }
 
 .form-container.active {
-    max-height: 2000px;
+    max-height: 1000px;
+    height: 1000px;
     padding-top: 2rem;
     margin-top: 2rem;
+    overflow-y: auto;
+}
+
+.form-container.active::-webkit-scrollbar {
+    display: none;
+}
+
+.form-container.active {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .form-container iframe {
     width: 100%;
-    height: 3342px;
+    height: 1800px;
     border: none;
     border-radius: 12px;
 }

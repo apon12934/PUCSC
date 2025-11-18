@@ -6,6 +6,9 @@
     <title>CSE FEST Cyber Security Hackathon 2025 | PUCSC</title>
     <meta name="description" content="Join the CSE FEST Cyber Security Hackathon 2025 by PUCSC - Defend, Detect, Dominate. Nov 28-29, 2025 at Presidency University.">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logos/pucsc_logo - white.svg">
+    
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -121,7 +124,7 @@
                         <div class="event-info-item">
                             <i class="fas fa-map-marker-alt text-cyber-cyan text-2xl mb-2"></i>
                             <p class="text-sm font-semibold">Venue</p>
-                            <p class="text-xs">Hall Room, Presidency University</p>
+                            <p class="text-xs">Room 115 & 502 [LAB]</p>
                         </div>
                         <div class="event-info-item">
                             <i class="fas fa-users text-cyber-cyan text-2xl mb-2"></i>
@@ -141,7 +144,7 @@
                     </div>
                     
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <div class="grid grid-cols-2 gap-4">
                         <a href="#register" class="cta-button cta-primary">
                             <i class="fas fa-user-plus mr-2"></i>Register Now
                         </a>
@@ -176,6 +179,9 @@
                     <div class="countdown-label">Seconds</div>
                 </div>
             </div>
+            <p class="text-center mt-8 text-cyber-cyan text-lg font-semibold">
+                Registration closes on November 28, 2025 at 12:00 PM
+            </p>
         </div>
     </section>
     
@@ -274,7 +280,7 @@
                     <span class="progress-text" id="progressText">0 / 15</span>
                 </div>
             </div>
-            <p class="text-center mt-4 text-sm text-gray-300">Limited to 15 teams only!</p>
+            <p class="text-center mt-4 text-sm text-gray-300">Hurry up! Only 10 teams left.</p>
         </div>
     </section>
     
@@ -296,10 +302,14 @@
                         </li>
                         <li class="flex items-start">
                             <span class="text-cyber-cyan font-bold mr-3">3.</span>
-                            <span>Save the transaction ID</span>
+                            <span>Enter your <strong>Team Name</strong> in reference</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-cyber-cyan font-bold mr-3">4.</span>
+                            <span>Save the transaction ID</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyber-cyan font-bold mr-3">5.</span>
                             <span>Fill the registration form with your payment details</span>
                         </li>
                     </ol>
@@ -309,7 +319,7 @@
                     <div class="payment-method-btn bkash-btn relative">
                         <img src="assets/icons/Bkash.svg" alt="bKash" class="h-12 mb-2">
                         <span class="text-xl font-bold">Pay with bKash</span>
-                        <span class="text-sm opacity-80">Personal: 01953675886</span>
+                        <span class="text-lg font-bold" style="color: #ff346e;">Personal: 01953675886</span>
                         <span id="bkash-copied" class="absolute bottom-3 right-14 bg-cyber-cyan text-cyber-navy px-3 py-1 rounded text-xs font-semibold opacity-0 transition-opacity">Copied!</span>
                         <button onclick="copyNumber('01953675886', 'bkash')" class="absolute bottom-3 right-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-2 w-10 h-10 flex items-center justify-center transition-all" title="Copy number">
                             <i class="fas fa-copy text-sm"></i>
@@ -318,7 +328,7 @@
                     <div class="payment-method-btn nagad-btn relative">
                         <img src="assets/icons/Nagad.svg" alt="Nagad" class="h-12 mb-2">
                         <span class="text-xl font-bold">Pay with Nagad</span>
-                        <span class="text-sm opacity-80">Personal: 01953675886</span>
+                        <span class="text-lg font-bold" style="color: #F7941D;">Personal: 01953675886</span>
                         <span id="nagad-copied" class="absolute bottom-3 right-14 bg-cyber-cyan text-cyber-navy px-3 py-1 rounded text-xs font-semibold opacity-0 transition-opacity">Copied!</span>
                         <button onclick="copyNumber('01953675886', 'nagad')" class="absolute bottom-3 right-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-2 w-10 h-10 flex items-center justify-center transition-all" title="Copy number">
                             <i class="fas fa-copy text-sm"></i>
@@ -329,7 +339,7 @@
                 <div class="mt-8 p-4 bg-cyber-blue bg-opacity-30 rounded-lg border border-cyber-cyan border-opacity-30">
                     <p class="text-sm text-center text-gray-200">
                         <i class="fas fa-info-circle text-cyber-cyan mr-2"></i>
-                        Payment details will be shared after registration form submission
+                        Please complete the payment before filling out the registration form
                     </p>
                 </div>
             </div>
@@ -349,15 +359,7 @@
             </div>
             
             <div id="formContainer" class="form-container">
-                <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSdy9rvKEU9mQhomCSejP9Coznq-w6J_7W2O_FrovcZJweDiWA/viewform?embedded=true" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0"
-                    loading="lazy"
-                    title="Hackathon Registration Form">
-                    Loading…
-                </iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdy9rvKEU9mQhomCSejP9Coznq-w6J_7W2O_FrovcZJweDiWA/viewform?embedded=true" width="640" height="1800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
         </div>
     </section>
@@ -611,47 +613,92 @@
     <!-- Demo Question -->
     <section class="demo-section py-16 md:py-20">
         <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="section-title text-center mb-12">Sample Challenge</h2>
+            <h2 class="section-title text-center mb-12">Hackathon Challenge Overview</h2>
             <div class="demo-card">
                 <div class="demo-header">
-                    <i class="fas fa-flag text-cyber-cyan text-2xl mr-3"></i>
-                    <h3 class="text-xl font-bold">CTF-Style Sample Question</h3>
+                    <i class="fas fa-rocket text-cyber-cyan text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold">Hackathon Announcement: The Redaction Challenge</h3>
                 </div>
                 <div class="demo-body">
-                    <h4 class="text-lg font-bold mb-4 text-cyber-cyan">Challenge: Basic Redaction Test</h4>
-                    <p class="mb-4">Given the following text, identify and redact all personally identifiable information (PII):</p>
+                    <p class="mb-6 text-gray-200">
+                        Welcome to our upcoming hackathon! This event will focus on building intelligent systems that can automatically redact sensitive information from text data. Participants will work with a specially prepared dataset and will design models or algorithms that identify and conceal confidential elements while preserving the overall readability and utility of the content.
+                    </p>
                     
+                    <h4 class="text-lg font-bold mb-4 text-cyber-cyan flex items-center">
+                        <i class="fas fa-search mr-2"></i>
+                        Theme Overview:
+                    </h4>
+                    <p class="mb-6 text-gray-200">
+                        Data privacy and responsible information sharing are more important than ever. In this challenge, you'll tackle real-world scenarios where sensitive details must be protected — think names, IDs, locations, or other private data — without losing the essence of the document.
+                    </p>
+                    
+                    <h4 class="text-lg font-bold mb-4 text-cyber-cyan flex items-center">
+                        <i class="fas fa-lightbulb mr-2"></i>
+                        Example of Redaction:
+                    </h4>
                     <div class="code-block mb-6">
-                        <code>
-                            "Dr. Sarah Johnson, SSN: 456-78-9012, called from her office at<br>
-                            Boston Medical Center (617-555-0123) to discuss patient records.<br>
-                            She lives at 742 Evergreen Terrace, Boston, MA 02101 and her<br>
-                            email is sarah.j@bostonmed.org. The patient, Michael Rodriguez,<br>
-                            was born on 03/15/1985 and his credit card ending in 4532 was<br>
-                            charged $250 for the consultation."
-                        </code>
+                        <div class="mb-3">
+                            <strong class="text-cyber-cyan-light">Original:</strong><br>
+                            John Smith's social security number is 123-45-6789 and he lives in New York.
+                        </div>
+                        <div>
+                            <strong class="text-cyber-cyan-light">Redacted:</strong><br>
+                            [NAME]'s social security number is [SSN] and he lives in [LOCATION].
+                        </div>
                     </div>
+                    <p class="mb-6 text-gray-200">
+                        This demonstrates how a redaction system hides sensitive information while keeping the text meaningful.
+                    </p>
                     
-                    <h4 class="text-lg font-bold mb-3 text-cyber-cyan">Your Task:</h4>
-                    <ul class="space-y-2 mb-6">
+                    <h4 class="text-lg font-bold mb-4 text-cyber-cyan flex items-center">
+                        <i class="fas fa-cogs mr-2"></i>
+                        What to Expect:
+                    </h4>
+                    <ul class="space-y-3 mb-6 text-gray-200">
                         <li class="flex items-start">
-                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
-                            <span>Identify all types of sensitive information (names, SSN, phone, address, email, DOB, credit card)</span>
+                            <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                            <span>A dataset will be provided at the start of the contest.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
-                            <span>Replace each with appropriate tags: [NAME], [SSN], [PHONE], [ADDRESS], [EMAIL], [DOB], [CREDIT_CARD]</span>
+                            <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                            <span>Your goal will be to build and evaluate automated redaction techniques.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
-                            <span>Ensure the redacted text remains contextually meaningful</span>
+                            <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                            <span>Evaluation criteria will focus on accuracy, coverage, and preservation of context.</span>
                         </li>
                     </ul>
                     
-                    <div class="bg-cyber-blue bg-opacity-30 p-4 rounded-lg">
-                        <p class="text-sm">
-                            <i class="fas fa-lightbulb text-cyber-cyan mr-2"></i>
-                            <strong>Hint:</strong> The actual challenge will include more complex scenarios with ambiguous cases and edge cases to test your system's robustness.
+                    <h4 class="text-lg font-bold mb-4 text-cyber-cyan flex items-center">
+                        <i class="fas fa-puzzle-piece mr-2"></i>
+                        To-Do List:
+                    </h4>
+                    <ul class="space-y-3 mb-6 text-gray-200">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
+                            <span><strong>Create the codebase</strong> – Develop your main program or model to handle text redaction.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
+                            <span><strong>Create a UI to calculate accuracy</strong> – Design a simple interface that allows evaluation of your system's performance.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
+                            <span><strong>Prepare a presentation</strong> – Summarize your approach, methodology, and results clearly.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
+                            <span><strong>Maintain a repository for the whole codebase</strong> – Ensure your project is well-organized, documented, and version-controlled.</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="bg-cyber-blue bg-opacity-30 p-4 rounded-lg border border-cyber-cyan border-opacity-30">
+                        <h4 class="text-lg font-bold mb-3 text-cyber-cyan flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            Details to Come:
+                        </h4>
+                        <p class="text-sm text-gray-200">
+                            We'll share full dataset access, submission format, and scoring guidelines once the contest begins. Until then, start brainstorming creative ways to balance privacy protection and information integrity!
                         </p>
                     </div>
                 </div>
@@ -771,14 +818,14 @@
             <div class="about-card">
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="flex-shrink-0">
-                        <img src="assets/logos/pucsc_logo.svg" alt="PUCSC Logo" class="w-32 h-32 md:w-48 md:h-48">
+                        <img src="assets/logos/pucsc_logo - white.svg" alt="PUCSC Logo" class="w-32 h-32 md:w-48 md:h-48">
                     </div>
                     <div class="flex-1 text-center md:text-left">
-                        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-cyber-cyan">Presidency University Computer Science Club</h3>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-cyber-cyan">PU Cyber Security Club</h3>
                         <p class="text-gray-200 leading-relaxed mb-4">
-                            PUCSC is the premier computer science organization at Presidency University, dedicated to fostering innovation, 
+                            PUCSC is the premier cyber security organization at Presidency University, dedicated to fostering innovation, 
                             technical excellence, and collaborative learning among students. We organize workshops, hackathons, coding competitions, 
-                            and tech talks to empower the next generation of technology leaders.
+                            and tech talks to empower the next generation of cybersecurity professionals.
                         </p>
                         <p class="text-gray-200 leading-relaxed">
                             Our mission is to create a vibrant community where students can explore emerging technologies, develop practical skills, 
@@ -798,22 +845,22 @@
             <p class="text-center text-gray-300 mb-8">Our team is here to assist you with any questions or concerns</p>
             
             <div class="grid md:grid-cols-3 gap-6">
-                <a href="#" class="help-card messenger-card">
+                <a href="https://m.me/779340995265581?source=qr_link_share" target="_blank" class="help-card messenger-card">
                     <i class="fab fa-facebook-messenger text-4xl mb-3"></i>
                     <h3 class="font-bold text-lg mb-2">Messenger</h3>
                     <p class="text-sm opacity-80">Chat with us on Facebook</p>
                 </a>
                 
-                <a href="#" class="help-card whatsapp-card">
+                <a href="https://wa.me/8801997126230" target="_blank" class="help-card whatsapp-card">
                     <i class="fab fa-whatsapp text-4xl mb-3"></i>
                     <h3 class="font-bold text-lg mb-2">WhatsApp</h3>
-                    <p class="text-sm opacity-80">Send us a message</p>
+                    <p class="text-sm opacity-80">+880 1997-126230</p>
                 </a>
                 
-                <a href="mailto:info@pucsc.org" class="help-card email-card">
+                <a href="mailto:pucsc@pu.edu.bd" class="help-card email-card">
                     <i class="fas fa-envelope text-4xl mb-3"></i>
                     <h3 class="font-bold text-lg mb-2">Email</h3>
-                    <p class="text-sm opacity-80">info@pucsc.org</p>
+                    <p class="text-sm opacity-80">pucsc@pu.edu.bd</p>
                 </a>
             </div>
         </div>
@@ -825,7 +872,7 @@
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <!-- Logo & Description -->
                 <div class="text-center md:text-left">
-                    <img src="assets/logos/pucsc_logo.svg" alt="PUCSC Logo" class="h-20 mx-auto md:mx-0 mb-4">
+                    <img src="assets/logos/pucsc_logo - white.svg" alt="PUCSC Logo" class="h-20 mx-auto md:mx-0 mb-4">
                     <p class="text-sm text-gray-300">Empowering the next generation of tech innovators</p>
                 </div>
                 
@@ -844,17 +891,8 @@
                 <div class="text-center md:text-right">
                     <h4 class="font-bold text-lg mb-4 text-cyber-cyan">Follow Us</h4>
                     <div class="flex justify-center md:justify-end space-x-4">
-                        <a href="#" class="social-icon" aria-label="Facebook">
+                        <a href="https://www.facebook.com/pucsc.info" target="_blank" class="social-icon" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </div>
@@ -862,10 +900,10 @@
             
             <div class="border-t border-gray-700 pt-8 text-center">
                 <p class="text-sm text-gray-300 mb-2">
-                    &copy; 2025 PUCSC - Presidency University Computer Science Club. All rights reserved.
+                    &copy; 2025 PUCSC - PU Cyber Security Club. All rights reserved.
                 </p>
                 <p class="text-xs text-gray-400">
-                    Designed by <span class="text-cyber-cyan font-semibold">PUCSC Graphics Team</span>
+                    Designed by <span class="text-cyber-cyan font-semibold">PUCSC Vice President & Graphics Designer</span><br/>Al Amin Islam Apon
                 </p>
             </div>
         </div>

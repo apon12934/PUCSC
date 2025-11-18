@@ -1,7 +1,7 @@
 // ====================================
 // Configuration
 // ====================================
-const EVENT_DATE = new Date('2025-11-28T20:00:00').getTime(); // Nov 28, 2025, 08:00 PM
+const EVENT_DATE = new Date('2025-11-28T12:00:00').getTime(); // Nov 28, 2025, 12:00 PM - Registration Deadline
 
 // ====================================
 // Smooth Scrolling
@@ -267,15 +267,9 @@ document.querySelectorAll('section').forEach(section => {
 });
 
 // ====================================
-// Payment Method Buttons (Placeholder)
+// Payment Method Buttons - Removed alert
 // ====================================
-const paymentBtns = document.querySelectorAll('.payment-method-btn');
-
-paymentBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        alert('Payment details will be shared after registration form submission. Please complete the registration form first.');
-    });
-});
+// Copy functionality is now handled by copyNumber() function
 
 // ====================================
 // Focus Management for Accessibility
@@ -401,7 +395,16 @@ function copyNumber(number, source) {
     event.preventDefault();
     event.stopPropagation();
     
-    navigator.clipboard.writeText(number).then(() => {
+    // Create temporary textarea element
+    const textarea = document.createElement('textarea');
+    textarea.value = number;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    
+    try {
+        document.execCommand('copy');
         // Show "Copied!" text
         const copiedText = document.getElementById(`${source}-copied`);
         copiedText.style.opacity = '1';
@@ -409,9 +412,11 @@ function copyNumber(number, source) {
         setTimeout(() => {
             copiedText.style.opacity = '0';
         }, 2000);
-    }).catch(err => {
+    } catch (err) {
         console.error('Failed to copy: ', err);
-    });
+    } finally {
+        document.body.removeChild(textarea);
+    }
 }
 
 // ====================================
