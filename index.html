@@ -87,16 +87,21 @@
     <!-- Hero Section -->
     <section id="overview" class="hero-section min-h-screen flex items-center pt-20 md:pt-0">
         <div class="container mx-auto px-4 py-12 md:py-20">
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <!-- Left: Tech Sphere -->
-                <div class="flex justify-center md:justify-start order-2 md:order-1">
+            <!-- Tech Sphere Background (Mobile Only) -->
+            <div class="tech-sphere-background md:hidden">
+                <img src="assets/graphics/tech-sphere.png" alt="Cyber Tech Sphere" class="tech-sphere">
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
+                <!-- Left: Tech Sphere (Desktop Only) -->
+                <div class="hidden md:flex justify-start order-1">
                     <div class="tech-sphere-container">
                         <img src="assets/graphics/tech-sphere.png" alt="Cyber Tech Sphere" class="tech-sphere">
                     </div>
                 </div>
                 
                 <!-- Right: Event Title -->
-                <div class="text-center md:text-left order-1 md:order-2">
+                <div class="text-center md:text-left order-2">
                     <div class="hero-main-image mb-8">
                         <img src="assets/heros/title.svg" alt="CSE FEST Cyber Security Hackathon 2025 by PUCSC" class="w-full h-auto max-w-3xl mx-auto md:mx-0">
                     </div>
