@@ -59,6 +59,12 @@ body {
     position: relative;
     padding: 0.5rem 0;
     transition: all 0.3s ease;
+    outline: none;
+}
+
+.nav-link:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .nav-link::after {

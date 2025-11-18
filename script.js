@@ -11,20 +11,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const navHeight = document.getElementById('navbar').offsetHeight;
-            const targetPosition = target.offsetTop - navHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+            // First, restore body scroll if it was disabled
+            const scrollY = document.body.style.top;
+            if (document.body.style.position === 'fixed') {
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                window.scrollTo(0, parseInt(scrollY || '0') * -1);
+            }
             
             // Close mobile menu if open
             const mobileMenu = document.getElementById('mobileMenu');
-            if (mobileMenu.classList.contains('active')) {
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
                 mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
+                const hamburger = document.getElementById('hamburger');
+                if (hamburger) {
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
             }
+            
+            // Then scroll to target
+            const navHeight = document.getElementById('navbar').offsetHeight;
+            const targetPosition = target.offsetTop - navHeight;
+            
+            // Small delay to ensure body is restored
+            setTimeout(() => {
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }, 10);
         }
     });
 });
