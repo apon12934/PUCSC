@@ -509,6 +509,23 @@ body {
 }
 
 /* ====================================
+   Prize Pool
+   ==================================== */
+.prize-card {
+    transition: all 0.3s ease;
+}
+
+.prize-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.prize-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ====================================
    Progress Bar
    ==================================== */
 .progress-section {
