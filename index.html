@@ -18,7 +18,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Bebas+Neue&family=DejaVu+Sans+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -98,7 +98,7 @@
                 <!-- Right: Event Title -->
                 <div class="text-center md:text-left order-1 md:order-2">
                     <div class="hero-main-image mb-8">
-                        <img src="assets/heros/hero-main.png" alt="CSE FEST Cyber Security Hackathon 2025 by PUCSC" class="w-full h-auto max-w-3xl mx-auto md:mx-0">
+                        <img src="assets/heros/title.svg" alt="CSE FEST Cyber Security Hackathon 2025 by PUCSC" class="w-full h-auto max-w-3xl mx-auto md:mx-0">
                     </div>
                     
                     <!-- Event Info -->
@@ -292,10 +292,10 @@
             <h2 class="section-title text-center mb-8">Registration Progress</h2>
             <div class="progress-container">
                 <div class="progress-bar" id="progressBar">
-                    <span class="progress-text" id="progressText">0 / 100</span>
+                    <span class="progress-text" id="progressText">0 / 15</span>
                 </div>
             </div>
-            <p class="text-center mt-4 text-sm text-gray-300">Hurry! Seats are filling fast</p>
+            <p class="text-center mt-4 text-sm text-gray-300">Limited to 15 teams only!</p>
         </div>
     </section>
     
@@ -327,16 +327,24 @@
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-6">
-                    <button class="payment-method-btn bkash-btn">
-                        <i class="fas fa-mobile-alt text-3xl mb-2"></i>
+                    <div class="payment-method-btn bkash-btn relative">
+                        <img src="assets/icons/Bkash.svg" alt="bKash" class="h-12 mb-2">
                         <span class="text-xl font-bold">Pay with bKash</span>
-                        <span class="text-sm opacity-80">Personal: 01XXXXXXXXX</span>
-                    </button>
-                    <button class="payment-method-btn nagad-btn">
-                        <i class="fas fa-wallet text-3xl mb-2"></i>
+                        <span class="text-sm opacity-80">Personal: 01953675886</span>
+                        <span id="bkash-copied" class="absolute bottom-3 right-14 bg-cyber-cyan text-cyber-navy px-3 py-1 rounded text-xs font-semibold opacity-0 transition-opacity">Copied!</span>
+                        <button onclick="copyNumber('01953675886', 'bkash')" class="absolute bottom-3 right-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-2 w-10 h-10 flex items-center justify-center transition-all" title="Copy number">
+                            <i class="fas fa-copy text-sm"></i>
+                        </button>
+                    </div>
+                    <div class="payment-method-btn nagad-btn relative">
+                        <img src="assets/icons/Nagad.svg" alt="Nagad" class="h-12 mb-2">
                         <span class="text-xl font-bold">Pay with Nagad</span>
-                        <span class="text-sm opacity-80">Personal: 01XXXXXXXXX</span>
-                    </button>
+                        <span class="text-sm opacity-80">Personal: 01953675886</span>
+                        <span id="nagad-copied" class="absolute bottom-3 right-14 bg-cyber-cyan text-cyber-navy px-3 py-1 rounded text-xs font-semibold opacity-0 transition-opacity">Copied!</span>
+                        <button onclick="copyNumber('01953675886', 'nagad')" class="absolute bottom-3 right-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-2 w-10 h-10 flex items-center justify-center transition-all" title="Copy number">
+                            <i class="fas fa-copy text-sm"></i>
+                        </button>
+                    </div>
                 </div>
                 
                 <div class="mt-8 p-4 bg-cyber-blue bg-opacity-30 rounded-lg border border-cyber-cyan border-opacity-30">

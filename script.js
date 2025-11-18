@@ -164,7 +164,7 @@ function updateProgress(current, max) {
 }
 
 // Example: Initialize with sample data
-updateProgress(35, 100);
+updateProgress(5, 15);
 
 // You can call this function from anywhere to update the progress
 // Example: updateProgress(50, 100);
@@ -374,6 +374,26 @@ window.addEventListener('scroll', () => {
 });
 
 // ====================================
+// Copy Number Function
+// ====================================
+function copyNumber(number, source) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    navigator.clipboard.writeText(number).then(() => {
+        // Show "Copied!" text
+        const copiedText = document.getElementById(`${source}-copied`);
+        copiedText.style.opacity = '1';
+        
+        setTimeout(() => {
+            copiedText.style.opacity = '0';
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+
+// ====================================
 // Console Log for Debugging
 // ====================================
 console.log('All scripts loaded successfully!');
@@ -381,3 +401,4 @@ console.log('Event Date:', new Date(EVENT_DATE).toLocaleString());
 
 // Export functions for external use (if needed)
 window.updateProgress = updateProgress;
+window.copyNumber = copyNumber;

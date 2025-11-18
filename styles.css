@@ -2,9 +2,9 @@
    CSS Variables - Cyber Theme Colors
    ==================================== */
 :root {
-    --cyber-navy: #0A1628;
-    --cyber-blue: #1E3A8A;
-    --cyber-royal: #2563EB;
+    --cyber-navy: #070840;
+    --cyber-blue: #0d2c82;
+    --cyber-royal: #227ab7;
     --cyber-cyan: #00D9FF;
     --cyber-cyan-light: #22D3EE;
     --white: #FFFFFF;
@@ -26,8 +26,8 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(135deg, var(--cyber-navy) 0%, var(--cyber-blue) 50%, var(--cyber-royal) 100%);
+    font-family: 'Google Sans', 'Product Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #227ab7 0%, #0d2c82 50%, #070840 100%);
     background-attachment: fixed;
     color: var(--white);
     overflow-x: hidden;
@@ -37,14 +37,14 @@ body {
    Navbar Styles
    ==================================== */
 #navbar {
-    background: rgba(10, 22, 40, 0.7);
+    background: rgba(7, 8, 64, 0.7);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 217, 255, 0.1);
     transition: all 0.3s ease;
 }
 
 #navbar.scrolled {
-    background: rgba(10, 22, 40, 0.95);
+    background: rgba(7, 8, 64, 0.95);
     box-shadow: 0 4px 20px rgba(0, 217, 255, 0.2);
 }
 
@@ -84,7 +84,7 @@ body {
     width: 80%;
     max-width: 300px;
     height: 100vh;
-    background: linear-gradient(180deg, var(--cyber-navy) 0%, var(--cyber-blue) 100%);
+    background: linear-gradient(180deg, #070840 0%, #0d2c82 100%);
     transition: right 0.3s ease;
     z-index: 100;
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
@@ -136,7 +136,7 @@ body {
    ==================================== */
 .hero-section {
     position: relative;
-    background: linear-gradient(135deg, var(--cyber-navy) 0%, var(--cyber-blue) 100%);
+    background: linear-gradient(135deg, #070840 0%, #0d2c82 100%);
 }
 
 .tech-sphere-container {
@@ -405,7 +405,7 @@ body {
    Swiper Slider
    ==================================== */
 .slider-section {
-    background: linear-gradient(180deg, rgba(10, 22, 40, 0.5) 0%, rgba(30, 58, 138, 0.3) 100%);
+    background: linear-gradient(180deg, rgba(7, 8, 64, 0.5) 0%, rgba(13, 44, 130, 0.3) 100%);
 }
 
 .hackathonSwiper {
@@ -430,7 +430,7 @@ body {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: contain;
-    background: rgba(10, 22, 40, 0.5);
+    background: rgba(7, 8, 64, 0.5);
 }
 
 .slide-caption {
@@ -621,7 +621,7 @@ body {
 }
 
 .form-container.active {
-    max-height: 3500px;
+    max-height: 2000px;
     padding-top: 2rem;
     margin-top: 2rem;
 }
