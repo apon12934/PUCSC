@@ -56,13 +56,20 @@ const closeMenu = document.getElementById('closeMenu');
 hamburger.addEventListener('click', () => {
     mobileMenu.classList.add('active');
     hamburger.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    const scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
 });
 
 closeMenu.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
 });
 
 // Close menu when clicking outside
@@ -70,7 +77,11 @@ mobileMenu.addEventListener('click', (e) => {
     if (e.target === mobileMenu) {
         mobileMenu.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
 });
 
@@ -79,22 +90,31 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
         mobileMenu.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
 });
 
 // ====================================
 // Countdown Timer
 // ====================================
+const daysEl = document.getElementById('days');
+const hoursEl = document.getElementById('hours');
+const minutesEl = document.getElementById('minutes');
+const secondsEl = document.getElementById('seconds');
+
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = EVENT_DATE - now;
     
     if (distance < 0) {
-        document.getElementById('days').textContent = '00';
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
+        daysEl.innerHTML = '00';
+        hoursEl.innerHTML = '00';
+        minutesEl.innerHTML = '00';
+        secondsEl.innerHTML = '00';
         return;
     }
     
@@ -103,10 +123,11 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    // Use innerHTML and force width to prevent reflow
+    daysEl.innerHTML = String(days).padStart(2, '0');
+    hoursEl.innerHTML = String(hours).padStart(2, '0');
+    minutesEl.innerHTML = String(minutes).padStart(2, '0');
+    secondsEl.innerHTML = String(seconds).padStart(2, '0');
 }
 
 // Update countdown every second
