@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE FEST Cyber Security Hackathon 2025 | PUCSC</title>
+    <meta name="description" content="Join the CSE FEST Cyber Security Hackathon 2025 by PUCSC - Defend, Detect, Dominate. Nov 28-29, 2025 at Presidency University.">
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Bebas+Neue&family=DejaVu+Sans+Mono:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-navy': '#0A1628',
+                        'cyber-blue': '#1E3A8A',
+                        'cyber-royal': '#2563EB',
+                        'cyber-cyan': '#00D9FF',
+                        'cyber-cyan-light': '#22D3EE',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cyber-navy text-white">
+    
+    <!-- Sticky Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="assets/logos/pucsc_logo.svg" alt="PUCSC Logo" class="h-12 md:h-16">
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="#overview" class="nav-link text-sm lg:text-base">Overview</a>
+                <a href="#register" class="nav-link text-sm lg:text-base">Register</a>
+                <a href="#payment" class="nav-link text-sm lg:text-base">Payment</a>
+                <a href="#rules" class="nav-link text-sm lg:text-base">Rules</a>
+                <a href="#faq" class="nav-link text-sm lg:text-base">FAQ</a>
+                <a href="#contact" class="nav-link text-sm lg:text-base">Contact</a>
+            </div>
+            
+            <!-- Mobile Hamburger -->
+            <button id="hamburger" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="mobile-menu-content">
+                <button id="closeMenu" class="close-btn" aria-label="Close menu">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div class="flex flex-col space-y-6 mt-16">
+                    <a href="#overview" class="mobile-nav-link">Overview</a>
+                    <a href="#register" class="mobile-nav-link">Register</a>
+                    <a href="#payment" class="mobile-nav-link">Payment</a>
+                    <a href="#rules" class="mobile-nav-link">Rules</a>
+                    <a href="#faq" class="mobile-nav-link">FAQ</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="overview" class="hero-section min-h-screen flex items-center pt-20 md:pt-0">
+        <div class="container mx-auto px-4 py-12 md:py-20">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <!-- Left: Tech Sphere -->
+                <div class="flex justify-center md:justify-start order-2 md:order-1">
+                    <div class="tech-sphere-container">
+                        <img src="assets/graphics/tech-sphere.png" alt="Cyber Tech Sphere" class="tech-sphere">
+                    </div>
+                </div>
+                
+                <!-- Right: Event Title -->
+                <div class="text-center md:text-left order-1 md:order-2">
+                    <h1 class="hero-title mb-4">
+                        <span class="block text-2xl md:text-3xl lg:text-4xl cse-fest-text">CSE FEST</span>
+                        <span class="block text-4xl md:text-5xl lg:text-7xl cyber-security-text neon-text mt-2">CYBER SECURITY</span>
+                        <span class="block text-4xl md:text-5xl lg:text-7xl hackathon-text neon-text-outline">HACKATHON</span>
+                        <span class="block text-3xl md:text-4xl lg:text-5xl year-text text-cyber-cyan mt-2">2025</span>
+                        <span class="block text-xl md:text-2xl lg:text-3xl by-pucsc-text mt-2"><span class="by-text">by</span> <span class="pucsc-text">PUCSC</span></span>
+                    </h1>
+                    
+                    <p class="hero-subtitle slogan-text text-xl md:text-2xl lg:text-3xl mb-8">
+                        Defend <span class="text-cyber-cyan">•</span> Detect <span class="text-cyber-cyan">•</span> Dominate
+                    </p>
+                    
+                    <!-- Event Info -->
+                    <div class="event-info-grid mb-8">
+                        <div class="event-info-item">
+                            <i class="fas fa-calendar-alt text-cyber-cyan text-2xl mb-2"></i>
+                            <p class="text-sm font-semibold">Date</p>
+                            <p class="text-xs">Nov 28-29, 2025</p>
+                        </div>
+                        <div class="event-info-item">
+                            <i class="fas fa-clock text-cyber-cyan text-2xl mb-2"></i>
+                            <p class="text-sm font-semibold">Time</p>
+                            <p class="text-xs">08:00 PM</p>
+                        </div>
+                        <div class="event-info-item">
+                            <i class="fas fa-map-marker-alt text-cyber-cyan text-2xl mb-2"></i>
+                            <p class="text-sm font-semibold">Venue</p>
+                            <p class="text-xs">Hall Room, Presidency University</p>
+                        </div>
+                        <div class="event-info-item">
+                            <i class="fas fa-users text-cyber-cyan text-2xl mb-2"></i>
+                            <p class="text-sm font-semibold">Team Size</p>
+                            <p class="text-xs">3 Members</p>
+                        </div>
+                        <div class="event-info-item">
+                            <i class="fas fa-money-bill-wave text-cyber-cyan text-2xl mb-2"></i>
+                            <p class="text-sm font-semibold">Fee</p>
+                            <p class="text-xs">300 BDT</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#register" class="cta-button cta-primary">
+                            <i class="fas fa-user-plus mr-2"></i>Register Now
+                        </a>
+                        <a href="#payment" class="cta-button cta-secondary">
+                            <i class="fas fa-credit-card mr-2"></i>Pay Fee
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Countdown Timer -->
+    <section class="countdown-section py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-12">Event Starts In</h2>
+            <div id="countdown" class="countdown-grid">
+                <div class="countdown-box">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Image Slider -->
+    <section class="slider-section py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-12">What's In It For You?</h2>
+            <div class="swiper hackathonSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="assets/heros/hero-main.png" alt="Prize">
+                            <div class="slide-caption">
+                                <h3>Exciting Prizes</h3>
+                                <p>Win amazing cash prizes and rewards</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="assets/heros/hero-main.png" alt="T-shirt">
+                            <div class="slide-caption">
+                                <h3>Exclusive T-Shirt</h3>
+                                <p>Get your hackathon swag</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="assets/heros/hero-main.png" alt="Notebook">
+                            <div class="slide-caption">
+                                <h3>Premium Notebook</h3>
+                                <p>Document your journey</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="assets/heros/hero-main.png" alt="Pen">
+                            <div class="slide-caption">
+                                <h3>Branded Pen</h3>
+                                <p>Write your success story</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="assets/heros/hero-main.png" alt="Certificate">
+                            <div class="slide-caption">
+                                <h3>Certificate</h3>
+                                <p>Official participation certificate</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-card">
+                            <img src="assets/heros/hero-main.png" alt="Payment">
+                            <div class="slide-caption">
+                                <h3>Easy Payment</h3>
+                                <p>bKash & Nagad accepted</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Event Highlights -->
+    <section class="highlights-section py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-12">Event Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <i class="fas fa-users text-4xl text-cyber-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Team Size: 3</h3>
+                    <p class="text-sm text-gray-300">Form your squad of 3 members</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-money-bill-wave text-4xl text-cyber-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Fee: 300 BDT</h3>
+                    <p class="text-sm text-gray-300">Per team registration fee</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-tshirt text-4xl text-cyber-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Free T-Shirt</h3>
+                    <p class="text-sm text-gray-300">Exclusive event merchandise</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-book text-4xl text-cyber-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Notebook & Pen</h3>
+                    <p class="text-sm text-gray-300">Quality stationery included</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-trophy text-4xl text-cyber-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Prize Pool</h3>
+                    <p class="text-sm text-gray-300">Multiple winning categories</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-map-marker-alt text-4xl text-cyber-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Presidency University</h3>
+                    <p class="text-sm text-gray-300">Hall Room venue</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-exclamation-circle text-4xl text-cyber-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Limited Seats</h3>
+                    <p class="text-sm text-gray-300">Register early to secure spot</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-certificate text-4xl text-cyber-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Certificate</h3>
+                    <p class="text-sm text-gray-300">For all participants</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Registration Progress Bar -->
+    <section class="progress-section py-16 md:py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="section-title text-center mb-8">Registration Progress</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <span class="progress-text" id="progressText">0 / 100</span>
+                </div>
+            </div>
+            <p class="text-center mt-4 text-sm text-gray-300">Hurry! Seats are filling fast</p>
+        </div>
+    </section>
+    
+    <!-- Payment Instructions -->
+    <section id="payment" class="payment-section py-16 md:py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="section-title text-center mb-12">Payment Instructions</h2>
+            <div class="payment-card">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-cyber-cyan">How to Pay</h3>
+                    <ol class="space-y-3 text-gray-200">
+                        <li class="flex items-start">
+                            <span class="text-cyber-cyan font-bold mr-3">1.</span>
+                            <span>Select your preferred payment method (bKash or Nagad)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyber-cyan font-bold mr-3">2.</span>
+                            <span>Send <strong class="text-white">300 BDT</strong> to the provided number</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyber-cyan font-bold mr-3">3.</span>
+                            <span>Save the transaction ID</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyber-cyan font-bold mr-3">4.</span>
+                            <span>Fill the registration form with your payment details</span>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <button class="payment-method-btn bkash-btn">
+                        <i class="fas fa-mobile-alt text-3xl mb-2"></i>
+                        <span class="text-xl font-bold">Pay with bKash</span>
+                        <span class="text-sm opacity-80">Personal: 01XXXXXXXXX</span>
+                    </button>
+                    <button class="payment-method-btn nagad-btn">
+                        <i class="fas fa-wallet text-3xl mb-2"></i>
+                        <span class="text-xl font-bold">Pay with Nagad</span>
+                        <span class="text-sm opacity-80">Personal: 01XXXXXXXXX</span>
+                    </button>
+                </div>
+                
+                <div class="mt-8 p-4 bg-cyber-blue bg-opacity-30 rounded-lg border border-cyber-cyan border-opacity-30">
+                    <p class="text-sm text-center text-gray-200">
+                        <i class="fas fa-info-circle text-cyber-cyan mr-2"></i>
+                        Payment details will be shared after registration form submission
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Embedded Google Form -->
+    <section id="register" class="form-section py-16 md:py-20">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="section-title text-center mb-8">Register Your Team</h2>
+            <p class="text-center text-gray-300 mb-8">Fill out the form below to secure your spot in the hackathon</p>
+            
+            <div class="text-center mb-6">
+                <button id="showFormBtn" class="cta-button cta-primary">
+                    <i class="fas fa-chevron-down mr-2"></i>Show Registration Form
+                </button>
+            </div>
+            
+            <div id="formContainer" class="form-container">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdy9rvKEU9mQhomCSejP9Coznq-w6J_7W2O_FrovcZJweDiWA/viewform?embedded=true" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    loading="lazy"
+                    title="Hackathon Registration Form">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rules & Regulations -->
+    <section id="rules" class="rules-section py-16 md:py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="section-title text-center mb-12">Rules & Regulations</h2>
+            
+            <div class="accordion">
+                <!-- Theme & Challenge -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="theme-content">
+                        <span class="accordion-title">
+                            <i class="fas fa-bullseye mr-3 text-cyber-cyan"></i>
+                            Hackathon Theme: The Redaction Challenge
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="theme-content" class="accordion-content">
+                        <div class="accordion-body">
+                            <h4 class="text-lg font-bold mb-3 text-cyber-cyan">🚀 Theme Overview</h4>
+                            <p class="mb-4">This event focuses on building intelligent systems that can automatically redact sensitive information from text data. Participants will work with a specially prepared dataset and design models or algorithms that identify and conceal confidential elements while preserving overall readability and utility.</p>
+                            
+                            <h4 class="text-lg font-bold mb-3 text-cyber-cyan">🔍 The Challenge</h4>
+                            <p class="mb-4">Data privacy and responsible information sharing are critical. You'll tackle real-world scenarios where sensitive details must be protected — think names, IDs, locations, or other private data — without losing the essence of the document.</p>
+                            
+                            <h4 class="text-lg font-bold mb-3 text-cyber-cyan">💡 Example of Redaction</h4>
+                            <div class="bg-cyber-blue bg-opacity-30 p-4 rounded-lg mb-4">
+                                <p class="mb-2"><strong>Original:</strong> John Smith's social security number is 123-45-6789 and he lives in New York.</p>
+                                <p><strong>Redacted:</strong> [NAME]'s social security number is [SSN] and he lives in [LOCATION].</p>
+                            </div>
+                            <p>This demonstrates how a redaction system hides sensitive information while keeping the text meaningful.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- What to Expect -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="expect-content">
+                        <span class="accordion-title">
+                            <i class="fas fa-lightbulb mr-3 text-cyber-cyan"></i>
+                            What to Expect
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="expect-content" class="accordion-content">
+                        <div class="accordion-body">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>A dataset will be provided at the start of the contest</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>Your goal will be to build and evaluate automated redaction techniques</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>Evaluation criteria will focus on accuracy, coverage, and preservation of context</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- To-Do List -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="todo-content">
+                        <span class="accordion-title">
+                            <i class="fas fa-tasks mr-3 text-cyber-cyan"></i>
+                            Required Deliverables
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="todo-content" class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-cyber-cyan text-cyber-navy font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1 flex-shrink-0">1</div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Create the codebase</h4>
+                                        <p class="text-sm text-gray-300">Develop your main program or model to handle text redaction</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-cyber-cyan text-cyber-navy font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1 flex-shrink-0">2</div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Create a UI to calculate accuracy</h4>
+                                        <p class="text-sm text-gray-300">Design a simple interface that allows evaluation of your system's performance</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-cyber-cyan text-cyber-navy font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1 flex-shrink-0">3</div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Prepare a presentation</h4>
+                                        <p class="text-sm text-gray-300">Summarize your approach, methodology, and results clearly</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-cyber-cyan text-cyber-navy font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1 flex-shrink-0">4</div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Maintain a repository for the whole codebase</h4>
+                                        <p class="text-sm text-gray-300">Ensure your project is well-organized, documented, and version-controlled</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Eligibility -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="eligibility-content">
+                        <span class="accordion-title">
+                            <i class="fas fa-user-check mr-3 text-cyber-cyan"></i>
+                            Eligibility Criteria
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="eligibility-content" class="accordion-content">
+                        <div class="accordion-body">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>Open to all university students from any department</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>Teams must consist of exactly 3 members</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>All team members must be currently enrolled students</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>Payment of 300 BDT registration fee required</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools Allowed -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="tools-content">
+                        <span class="accordion-title">
+                            <i class="fas fa-tools mr-3 text-cyber-cyan"></i>
+                            Tools & Technologies Allowed
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="tools-content" class="accordion-content">
+                        <div class="accordion-body">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>Any programming language (Python, JavaScript, Java, etc.)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>Machine learning frameworks and libraries permitted</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>Open-source tools and APIs allowed</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-cyber-cyan mr-3 mt-1"></i>
+                                    <span>Internet access provided during the event</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scoring Criteria -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="scoring-content">
+                        <span class="accordion-title">
+                            <i class="fas fa-chart-line mr-3 text-cyber-cyan"></i>
+                            Scoring & Judging Criteria
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="scoring-content" class="accordion-content">
+                        <div class="accordion-body">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-star text-cyber-cyan mr-3 mt-1"></i>
+                                    <span><strong>Accuracy (40%):</strong> How well your system identifies and redacts sensitive information</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-star text-cyber-cyan mr-3 mt-1"></i>
+                                    <span><strong>Coverage (25%):</strong> Ability to handle different types of sensitive data</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-star text-cyber-cyan mr-3 mt-1"></i>
+                                    <span><strong>Context Preservation (20%):</strong> Maintaining document readability after redaction</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-star text-cyber-cyan mr-3 mt-1"></i>
+                                    <span><strong>Innovation (10%):</strong> Creative approaches and unique solutions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-star text-cyber-cyan mr-3 mt-1"></i>
+                                    <span><strong>Presentation (5%):</strong> Quality of code, documentation, and presentation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Disqualification -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="disqualification-content">
+                        <span class="accordion-title">
+                            <i class="fas fa-ban mr-3 text-cyber-cyan"></i>
+                            Disqualification Reasons
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="disqualification-content" class="accordion-content">
+                        <div class="accordion-body">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-times-circle text-red-400 mr-3 mt-1"></i>
+                                    <span>Plagiarism or copying code from other teams</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-times-circle text-red-400 mr-3 mt-1"></i>
+                                    <span>Using pre-built solutions without modification</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-times-circle text-red-400 mr-3 mt-1"></i>
+                                    <span>Violation of code of conduct or disruptive behavior</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-times-circle text-red-400 mr-3 mt-1"></i>
+                                    <span>Failure to submit required deliverables on time</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Demo Question -->
+    <section class="demo-section py-16 md:py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="section-title text-center mb-12">Sample Challenge</h2>
+            <div class="demo-card">
+                <div class="demo-header">
+                    <i class="fas fa-flag text-cyber-cyan text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold">CTF-Style Sample Question</h3>
+                </div>
+                <div class="demo-body">
+                    <h4 class="text-lg font-bold mb-4 text-cyber-cyan">Challenge: Basic Redaction Test</h4>
+                    <p class="mb-4">Given the following text, identify and redact all personally identifiable information (PII):</p>
+                    
+                    <div class="code-block mb-6">
+                        <code>
+                            "Dr. Sarah Johnson, SSN: 456-78-9012, called from her office at<br>
+                            Boston Medical Center (617-555-0123) to discuss patient records.<br>
+                            She lives at 742 Evergreen Terrace, Boston, MA 02101 and her<br>
+                            email is sarah.j@bostonmed.org. The patient, Michael Rodriguez,<br>
+                            was born on 03/15/1985 and his credit card ending in 4532 was<br>
+                            charged $250 for the consultation."
+                        </code>
+                    </div>
+                    
+                    <h4 class="text-lg font-bold mb-3 text-cyber-cyan">Your Task:</h4>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
+                            <span>Identify all types of sensitive information (names, SSN, phone, address, email, DOB, credit card)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
+                            <span>Replace each with appropriate tags: [NAME], [SSN], [PHONE], [ADDRESS], [EMAIL], [DOB], [CREDIT_CARD]</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-cyber-cyan mr-3 mt-1"></i>
+                            <span>Ensure the redacted text remains contextually meaningful</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="bg-cyber-blue bg-opacity-30 p-4 rounded-lg">
+                        <p class="text-sm">
+                            <i class="fas fa-lightbulb text-cyber-cyan mr-2"></i>
+                            <strong>Hint:</strong> The actual challenge will include more complex scenarios with ambiguous cases and edge cases to test your system's robustness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section id="faq" class="faq-section py-16 md:py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="section-title text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq1-content">
+                        <span class="accordion-title">When and where is the hackathon?</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="faq1-content" class="accordion-content">
+                        <div class="accordion-body">
+                            The hackathon will be held on November 28-29, 2025, starting at 08:00 PM at the Hall Room, Presidency University.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq2-content">
+                        <span class="accordion-title">How do I form a team?</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="faq2-content" class="accordion-content">
+                        <div class="accordion-body">
+                            Teams must consist of exactly 3 members. You can form teams with your friends or classmates before registration. All team members' information must be provided during registration.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq3-content">
+                        <span class="accordion-title">What is the registration fee?</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="faq3-content" class="accordion-content">
+                        <div class="accordion-body">
+                            The registration fee is 300 BDT per team. Payment can be made via bKash or Nagad. Payment details will be shared after form submission.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq4-content">
+                        <span class="accordion-title">What will I receive as a participant?</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="faq4-content" class="accordion-content">
+                        <div class="accordion-body">
+                            All participants will receive an exclusive event T-shirt, premium notebook, branded pen, and an official participation certificate. Winning teams will receive additional prizes.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq5-content">
+                        <span class="accordion-title">Do I need prior experience in cybersecurity?</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="faq5-content" class="accordion-content">
+                        <div class="accordion-body">
+                            While prior experience is helpful, it's not mandatory. This hackathon is designed to challenge participants of all skill levels. We encourage students interested in data privacy and security to participate and learn.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq6-content">
+                        <span class="accordion-title">What should I bring to the event?</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="faq6-content" class="accordion-content">
+                        <div class="accordion-body">
+                            Bring your laptop with necessary development tools installed, chargers, student ID, and your creative mindset! Internet will be provided at the venue.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq7-content">
+                        <span class="accordion-title">Will food be provided?</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="faq7-content" class="accordion-content">
+                        <div class="accordion-body">
+                            Light refreshments and snacks will be provided during the event. We recommend having a meal before arriving as this is a focused coding session.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq8-content">
+                        <span class="accordion-title">How will winners be selected?</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div id="faq8-content" class="accordion-content">
+                        <div class="accordion-body">
+                            Winners will be selected based on accuracy (40%), coverage (25%), context preservation (20%), innovation (10%), and presentation quality (5%). Detailed scoring criteria are available in the Rules section.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About PUCSC -->
+    <section class="about-section py-16 md:py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="section-title text-center mb-12">About PUCSC</h2>
+            <div class="about-card">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-shrink-0">
+                        <img src="assets/logos/pucsc_logo.svg" alt="PUCSC Logo" class="w-32 h-32 md:w-48 md:h-48">
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-cyber-cyan">Presidency University Computer Science Club</h3>
+                        <p class="text-gray-200 leading-relaxed mb-4">
+                            PUCSC is the premier computer science organization at Presidency University, dedicated to fostering innovation, 
+                            technical excellence, and collaborative learning among students. We organize workshops, hackathons, coding competitions, 
+                            and tech talks to empower the next generation of technology leaders.
+                        </p>
+                        <p class="text-gray-200 leading-relaxed">
+                            Our mission is to create a vibrant community where students can explore emerging technologies, develop practical skills, 
+                            and connect with industry professionals. The CSE FEST Cyber Security Hackathon 2025 is our flagship event designed to 
+                            challenge and inspire students in the field of cybersecurity and data privacy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Help Section -->
+    <section id="contact" class="help-section py-16 md:py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="section-title text-center mb-12">Need Help?</h2>
+            <p class="text-center text-gray-300 mb-8">Our team is here to assist you with any questions or concerns</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="#" class="help-card messenger-card">
+                    <i class="fab fa-facebook-messenger text-4xl mb-3"></i>
+                    <h3 class="font-bold text-lg mb-2">Messenger</h3>
+                    <p class="text-sm opacity-80">Chat with us on Facebook</p>
+                </a>
+                
+                <a href="#" class="help-card whatsapp-card">
+                    <i class="fab fa-whatsapp text-4xl mb-3"></i>
+                    <h3 class="font-bold text-lg mb-2">WhatsApp</h3>
+                    <p class="text-sm opacity-80">Send us a message</p>
+                </a>
+                
+                <a href="mailto:info@pucsc.org" class="help-card email-card">
+                    <i class="fas fa-envelope text-4xl mb-3"></i>
+                    <h3 class="font-bold text-lg mb-2">Email</h3>
+                    <p class="text-sm opacity-80">info@pucsc.org</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Logo & Description -->
+                <div class="text-center md:text-left">
+                    <img src="assets/logos/pucsc_logo.svg" alt="PUCSC Logo" class="h-20 mx-auto md:mx-0 mb-4">
+                    <p class="text-sm text-gray-300">Empowering the next generation of tech innovators</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="text-center">
+                    <h4 class="font-bold text-lg mb-4 text-cyber-cyan">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#overview" class="footer-link">Overview</a></li>
+                        <li><a href="#register" class="footer-link">Register</a></li>
+                        <li><a href="#rules" class="footer-link">Rules</a></li>
+                        <li><a href="#faq" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="text-center md:text-right">
+                    <h4 class="font-bold text-lg mb-4 text-cyber-cyan">Follow Us</h4>
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-sm text-gray-300 mb-2">
+                    &copy; 2025 PUCSC - Presidency University Computer Science Club. All rights reserved.
+                </p>
+                <p class="text-xs text-gray-400">
+                    Designed by <span class="text-cyber-cyan font-semibold">PUCSC Graphics Team</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- SwiperJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
