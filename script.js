@@ -3,6 +3,22 @@
 // ====================================
 const EVENT_DATE = new Date('2025-11-24T00:00:00').getTime(); // Nov 24, 2025, 12:00 AM - Registration Deadline
 
+let scrollLockPosition = 0;
+
+const lockBodyScroll = () => {
+    scrollLockPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollLockPosition}px`;
+    document.body.style.width = '100%';
+};
+
+const unlockBodyScroll = () => {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollLockPosition);
+};
+
 // ====================================
 // Smooth Scrolling
 // ====================================
@@ -11,36 +27,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            // First, restore body scroll if it was disabled
-            const scrollY = document.body.style.top;
-            if (document.body.style.position === 'fixed') {
-                document.body.style.position = '';
-                document.body.style.top = '';
-                document.body.style.width = '';
-                window.scrollTo(0, parseInt(scrollY || '0') * -1);
-            }
-            
-            // Close mobile menu if open
+            // Check if mobile menu is open
             const mobileMenu = document.getElementById('mobileMenu');
-            if (mobileMenu && mobileMenu.classList.contains('active')) {
+            const isMenuOpen = mobileMenu && mobileMenu.classList.contains('active');
+            const navbar = document.getElementById('navbar');
+            const navHeight = navbar ? navbar.offsetHeight : 0;
+
+            if (isMenuOpen) {
+                const targetOffset = target.getBoundingClientRect().top + scrollLockPosition - navHeight;
                 mobileMenu.classList.remove('active');
                 const hamburger = document.getElementById('hamburger');
                 if (hamburger) {
                     hamburger.setAttribute('aria-expanded', 'false');
                 }
-            }
-            
-            // Then scroll to target
-            const navHeight = document.getElementById('navbar').offsetHeight;
-            const targetPosition = target.offsetTop - navHeight;
-            
-            // Small delay to ensure body is restored
-            setTimeout(() => {
+                unlockBodyScroll();
+                requestAnimationFrame(() => {
+                    window.scrollTo({
+                        top: targetOffset,
+                        behavior: 'smooth'
+                    });
+                });
+            } else {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                const targetPosition = target.getBoundingClientRect().top + currentScroll - navHeight;
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-            }, 10);
+            }
         }
     });
 });
@@ -72,20 +86,13 @@ const closeMenu = document.getElementById('closeMenu');
 hamburger.addEventListener('click', () => {
     mobileMenu.classList.add('active');
     hamburger.setAttribute('aria-expanded', 'true');
-    const scrollY = window.scrollY;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = '100%';
+    lockBodyScroll();
 });
 
 closeMenu.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
-    const scrollY = document.body.style.top;
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    unlockBodyScroll();
 });
 
 // Close menu when clicking outside
@@ -93,11 +100,7 @@ mobileMenu.addEventListener('click', (e) => {
     if (e.target === mobileMenu) {
         mobileMenu.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
-        const scrollY = document.body.style.top;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        unlockBodyScroll();
     }
 });
 
@@ -106,11 +109,7 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
         mobileMenu.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
-        const scrollY = document.body.style.top;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        unlockBodyScroll();
     }
 });
 
