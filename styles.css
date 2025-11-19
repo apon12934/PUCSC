@@ -174,9 +174,9 @@ body {
     opacity: 0.7;
 }
 
-/* Mobile tech sphere - faster animation (150s) */
+/* Mobile tech sphere - faster animation (70s) */
 .tech-sphere-background .tech-sphere {
-    animation: floatAndRotate 150s linear infinite;
+    animation: floatAndRotate 70s linear infinite;
 }
 
 /* Desktop tech sphere - keep original speed (200s) */

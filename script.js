@@ -1,7 +1,7 @@
 // ====================================
 // Configuration
 // ====================================
-const EVENT_DATE = new Date('2025-11-28T12:00:00').getTime(); // Nov 28, 2025, 12:00 PM - Registration Deadline
+const EVENT_DATE = new Date('2025-11-24T00:00:00').getTime(); // Nov 24, 2025, 12:00 AM - Registration Deadline
 
 // ====================================
 // Smooth Scrolling
