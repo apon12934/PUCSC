@@ -3,6 +3,13 @@
 // ====================================
 const EVENT_DATE = new Date('2025-11-24T00:00:00').getTime(); // Nov 24, 2025, 12:00 AM - Registration Deadline
 
+// Ensure off-screen images decode asynchronously when possible
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img:not([decoding])').forEach((img) => {
+        img.decoding = 'async';
+    });
+});
+
 let scrollLockPosition = 0;
 
 const lockBodyScroll = () => {
@@ -63,18 +70,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Navbar Scroll Effect
 // ====================================
 let lastScroll = 0;
-window.addEventListener('scroll', () => {
+let navbarTicking = false;
+const handleNavbarScroll = () => {
     const navbar = document.getElementById('navbar');
+    if (!navbar) {
+        navbarTicking = false;
+        return;
+    }
     const currentScroll = window.pageYOffset;
-    
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
     lastScroll = currentScroll;
+    navbarTicking = false;
+};
+
+window.addEventListener('scroll', () => {
+    if (!navbarTicking) {
+        navbarTicking = true;
+        window.requestAnimationFrame(handleNavbarScroll);
+    }
 });
+
+handleNavbarScroll();
 
 // ====================================
 // Mobile Hamburger Menu
@@ -186,6 +206,22 @@ const swiper = new Swiper('.hackathonSwiper', {
         },
     },
 });
+
+if ('IntersectionObserver' in window) {
+    const sliderSection = document.querySelector('.slider-section');
+    if (sliderSection && swiper?.autoplay) {
+        const sliderObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    swiper.autoplay.start();
+                } else {
+                    swiper.autoplay.stop();
+                }
+            });
+        }, { threshold: 0.2 });
+        sliderObserver.observe(sliderSection);
+    }
+}
 
 // ====================================
 // Registration Progress Bar

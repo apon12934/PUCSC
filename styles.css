@@ -37,6 +37,41 @@ body {
     position: relative;
 }
 
+/* Defer rendering work for below-the-fold sections to boost performance on low-end devices */
+.slider-section,
+.prize-section,
+.progress-section,
+.payment-section,
+.form-section,
+.rules-section,
+.demo-section,
+.faq-section,
+.about-section,
+.help-section,
+.schedule-section,
+.footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 600px 800px;
+    contain: layout paint style;
+}
+
+@media (max-width: 768px) {
+    .slider-section,
+    .prize-section,
+    .progress-section,
+    .payment-section,
+    .form-section,
+    .rules-section,
+    .demo-section,
+    .faq-section,
+    .about-section,
+    .help-section,
+    .schedule-section,
+    .footer {
+        contain-intrinsic-size: 400px 600px;
+    }
+}
+
 /* ====================================
    Navbar Styles
    ==================================== */
