@@ -204,7 +204,7 @@
             <div class="swiper hackathonSwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="slide-card">
+                        <div class="slide-card" onclick="openLightbox('assets/gallery/hero-main.jpg')">
                             <img src="assets/gallery/hero-main.jpg" alt="Prize" loading="lazy">
                             <div class="slide-caption">
                                 <h3>Exciting Prizes</h3>
@@ -213,7 +213,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slide-card">
+                        <div class="slide-card" onclick="openLightbox('assets/gallery/T shirt.jpg')">
                             <img src="assets/gallery/T shirt.jpg" alt="T-shirt" loading="lazy">
                             <div class="slide-caption">
                                 <h3>Exclusive T-Shirt</h3>
@@ -222,7 +222,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slide-card">
+                        <div class="slide-card" onclick="openLightbox('assets/gallery/hero-main.jpg')">
                             <img src="assets/gallery/hero-main.jpg" alt="Notebook" loading="lazy">
                             <div class="slide-caption">
                                 <h3>Premium Notebook</h3>
@@ -231,7 +231,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slide-card">
+                        <div class="slide-card" onclick="openLightbox('assets/gallery/hero-main.jpg')">
                             <img src="assets/gallery/hero-main.jpg" alt="Pen" loading="lazy">
                             <div class="slide-caption">
                                 <h3>Branded Pen</h3>
@@ -240,7 +240,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slide-card">
+                        <div class="slide-card" onclick="openLightbox('assets/gallery/hero-main.jpg')">
                             <img src="assets/gallery/hero-main.jpg" alt="Certificate" loading="lazy">
                             <div class="slide-caption">
                                 <h3>Certificate</h3>
@@ -249,7 +249,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slide-card">
+                        <div class="slide-card" onclick="openLightbox('assets/gallery/hero-main.jpg')">
                             <img src="assets/gallery/hero-main.jpg" alt="Payment" loading="lazy">
                             <div class="slide-caption">
                                 <h3>Easy Payment</h3>
@@ -264,6 +264,12 @@
             </div>
         </div>
     </section>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Full screen image">
+    </div>
     
     <!-- Prize Pool -->
     <section class="prize-section py-16 md:py-20">

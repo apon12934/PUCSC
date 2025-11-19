@@ -436,6 +436,30 @@ function copyNumber(number, source) {
 }
 
 // ====================================
+// Lightbox Functions
+// ====================================
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = imageSrc;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close lightbox on ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
+
+// ====================================
 // Console Log for Debugging
 // ====================================
 console.log('All scripts loaded successfully!');
@@ -443,4 +467,6 @@ console.log('Event Date:', new Date(EVENT_DATE).toLocaleString());
 
 // Export functions for external use (if needed)
 window.updateProgress = updateProgress;
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
 window.copyNumber = copyNumber;
