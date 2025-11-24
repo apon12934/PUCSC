@@ -1,7 +1,7 @@
 // ====================================
 // Configuration
 // ====================================
-const EVENT_DATE = new Date('2025-11-24T23:59:00').getTime(); // Nov 24, 2025, 11:59 PM - Registration Deadline
+const EVENT_DATE = new Date('2025-11-26T23:59:00').getTime(); // Nov 26, 2025, 11:59 PM - Registration Deadline
 
 // Ensure off-screen images decode asynchronously when possible
 document.addEventListener('DOMContentLoaded', () => {
