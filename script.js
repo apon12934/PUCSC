@@ -236,7 +236,7 @@ function updateProgress(current, max) {
 }
 
 // Example: Initialize with sample data
-updateProgress(5, 15);
+updateProgress(7, 15);
 
 // You can call this function from anywhere to update the progress
 // Example: updateProgress(50, 100);
