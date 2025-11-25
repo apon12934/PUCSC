@@ -247,51 +247,59 @@ updateProgress(15, 15);
 const showFormBtn = document.getElementById('showFormBtn');
 const formContainer = document.getElementById('formContainer');
 
-showFormBtn.addEventListener('click', () => {
-    formContainer.classList.toggle('active');
-    
-    if (formContainer.classList.contains('active')) {
-        showFormBtn.innerHTML = '<i class="fas fa-chevron-up mr-2"></i>Hide Registration Form';
+if (showFormBtn && formContainer) {
+    showFormBtn.addEventListener('click', () => {
+        formContainer.classList.toggle('active');
         
-        // Smooth scroll to form
-        setTimeout(() => {
-            formContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 300);
-    } else {
-        showFormBtn.innerHTML = '<i class="fas fa-chevron-down mr-2"></i>Show Registration Form';
-    }
-});
+        if (formContainer.classList.contains('active')) {
+            showFormBtn.innerHTML = '<i class="fas fa-chevron-up mr-2"></i>Hide Registration Form';
+            setTimeout(() => {
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 300);
+        } else {
+            showFormBtn.innerHTML = '<i class="fas fa-chevron-down mr-2"></i>Show Registration Form';
+        }
+    });
+}
 
 // ====================================
 // Accordion Functionality
 // ====================================
-const accordionHeaders = document.querySelectorAll('.accordion-header');
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
 
-accordionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-        const expanded = header.getAttribute('aria-expanded') === 'true';
-        const content = document.getElementById(header.getAttribute('aria-controls'));
-        
-        // Close all other accordions
-        accordionHeaders.forEach(otherHeader => {
-            if (otherHeader !== header) {
-                otherHeader.setAttribute('aria-expanded', 'false');
-                const otherContent = document.getElementById(otherHeader.getAttribute('aria-controls'));
-                otherContent.classList.remove('active');
-            }
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const expanded = header.getAttribute('aria-expanded') === 'true';
+            const contentId = header.getAttribute('aria-controls');
+            const content = document.getElementById(contentId);
+            
+            if (!content) return; // Safety check
+            
+            // Close all other accordions
+            accordionHeaders.forEach(otherHeader => {
+                if (otherHeader !== header) {
+                    otherHeader.setAttribute('aria-expanded', 'false');
+                    const otherContentId = otherHeader.getAttribute('aria-controls');
+                    const otherContent = document.getElementById(otherContentId);
+                    if (otherContent) {
+                        otherContent.classList.remove('active');
+                    }
+                }
+            });
+            
+            // Toggle current accordion
+            header.setAttribute('aria-expanded', !expanded);
+            content.classList.toggle('active');
         });
         
-        // Toggle current accordion
-        header.setAttribute('aria-expanded', !expanded);
-        content.classList.toggle('active');
-    });
-    
-    // Keyboard navigation
-    header.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            header.click();
-        }
+        // Keyboard navigation
+        header.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                header.click();
+            }
+        });
     });
 });
 
