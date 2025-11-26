@@ -1,7 +1,7 @@
 // ====================================
 // Configuration
 // ====================================
-const EVENT_DATE = new Date('2025-11-25T13:00:00').getTime(); // Nov 26, 2025, 11:59 PM - Registration Deadline
+const EVENT_DATE = new Date('2025-11-28T20:00:00').getTime(); // Nov 28, 2025, 8:00 PM - Hackathon Start
 
 // Ensure off-screen images decode asynchronously when possible
 document.addEventListener('DOMContentLoaded', () => {
