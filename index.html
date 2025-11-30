@@ -84,8 +84,8 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
                 <a href="#overview" class="nav-link text-sm lg:text-base">Overview</a>
-                <a href="#payment" class="nav-link text-sm lg:text-base">Payment</a>
-                <a href="#register" class="nav-link text-sm lg:text-base">Register</a>
+                <a href="#winners" class="nav-link text-sm lg:text-base">Winners</a>
+                <a href="#gallery" class="nav-link text-sm lg:text-base">Gallery</a>
                 <a href="#rules" class="nav-link text-sm lg:text-base">Rules</a>
                 <a href="#demo-question" class="nav-link text-sm lg:text-base">Demo Question</a>
                 <a href="#faq" class="nav-link text-sm lg:text-base">FAQ</a>
@@ -106,8 +106,8 @@
                 </button>
                 <div class="flex flex-col space-y-6 mt-16">
                     <a href="#overview" class="mobile-nav-link">Overview</a>
-                    <a href="#payment" class="mobile-nav-link">Payment</a>
-                    <a href="#register" class="mobile-nav-link">Register</a>
+                    <a href="#winners" class="mobile-nav-link">Winners</a>
+                    <a href="#gallery" class="mobile-nav-link">Gallery</a>
                     <a href="#rules" class="mobile-nav-link">Rules</a>
                     <a href="#demo-question" class="mobile-nav-link">Demo Question</a>
                     <a href="#faq" class="mobile-nav-link">FAQ</a>
@@ -175,11 +175,11 @@
                     
                     <!-- CTA Buttons -->
                     <div class="grid grid-cols-2 gap-4">
-                        <a href="#register" class="cta-button cta-primary">
-                            <i class="fas fa-user-plus mr-2"></i>Register Now
+                        <a href="#winners" class="cta-button cta-primary">
+                            <i class="fas fa-trophy mr-2"></i>View Winners
                         </a>
-                        <a href="#payment" class="cta-button cta-secondary">
-                            <i class="fas fa-credit-card mr-2"></i>Pay Fee
+                        <a href="#gallery" class="cta-button cta-secondary">
+                            <i class="fas fa-images mr-2"></i>Event Gallery
                         </a>
                     </div>
                 </div>
@@ -187,31 +187,91 @@
         </div>
     </section>
     
-    <!-- Countdown Timer -->
-    <section class="countdown-section py-16 md:py-20">
+    <!-- Winners Announcement -->
+    <section id="winners" class="winners-section py-16 md:py-20">
         <div class="container mx-auto px-4">
-            <h2 class="section-title text-center mb-12">Hackathon Starts In</h2>
-            <div id="countdown" class="countdown-grid">
-                <div class="countdown-box">
-                    <div class="countdown-number" id="days">00</div>
-                    <div class="countdown-label">Days</div>
+            <div class="text-center mb-12">
+                <h2 class="section-title">🎉 Hackathon Complete!</h2>
+                <p class="text-gray-300 text-lg mt-4">Congratulations to all participants for an incredible showcase of talent and innovation!</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <!-- Champion -->
+                <div class="mb-8 transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-gradient-to-br from-yellow-500/20 to-amber-600/20 border-2 border-yellow-400 rounded-3xl p-8 shadow-2xl">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div class="flex items-center gap-6">
+                                <div class="relative">
+                                    <i class="fas fa-trophy text-7xl text-yellow-400 animate-pulse"></i>
+                                    <div class="absolute -top-2 -right-2 bg-yellow-400 text-cyber-navy rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
+                                </div>
+                                <div class="text-center md:text-left">
+                                    <h3 class="text-4xl font-bold text-yellow-400 mb-2">Champion</h3>
+                                    <p class="text-3xl font-bold text-white">Super Saiyans</p>
+                                </div>
+                            </div>
+                            <div class="text-center md:text-right">
+                                <div class="text-5xl font-bold text-yellow-400">🏆</div>
+                                <p class="text-xl text-gray-300 mt-2">Outstanding Performance</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="countdown-box">
-                    <div class="countdown-number" id="hours">00</div>
-                    <div class="countdown-label">Hours</div>
+
+                <!-- 1st Runner's Up -->
+                <div class="mb-8 transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-gradient-to-br from-gray-400/20 to-gray-500/20 border-2 border-gray-300 rounded-3xl p-8 shadow-xl">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div class="flex items-center gap-6">
+                                <div class="relative">
+                                    <i class="fas fa-medal text-6xl text-gray-300"></i>
+                                    <div class="absolute -top-2 -right-2 bg-gray-300 text-cyber-navy rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
+                                </div>
+                                <div class="text-center md:text-left">
+                                    <h3 class="text-3xl font-bold text-gray-300 mb-2">1st Runner's Up</h3>
+                                    <p class="text-2xl font-bold text-white">CyberX404</p>
+                                </div>
+                            </div>
+                            <div class="text-center md:text-right">
+                                <div class="text-4xl font-bold text-gray-300">🥈</div>
+                                <p class="text-lg text-gray-300 mt-2">Excellent Work</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="countdown-box">
-                    <div class="countdown-number" id="minutes">00</div>
-                    <div class="countdown-label">Minutes</div>
-                </div>
-                <div class="countdown-box">
-                    <div class="countdown-number" id="seconds">00</div>
-                    <div class="countdown-label">Seconds</div>
+
+                <!-- 2nd Runner's Up -->
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-gradient-to-br from-orange-700/20 to-orange-800/20 border-2 border-orange-400 rounded-3xl p-8 shadow-xl">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div class="flex items-center gap-6">
+                                <div class="relative">
+                                    <i class="fas fa-medal text-6xl text-orange-400"></i>
+                                    <div class="absolute -top-2 -right-2 bg-orange-400 text-cyber-navy rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
+                                </div>
+                                <div class="text-center md:text-left">
+                                    <h3 class="text-3xl font-bold text-orange-400 mb-2">2nd Runner's Up</h3>
+                                    <p class="text-2xl font-bold text-white">Team-231</p>
+                                </div>
+                            </div>
+                            <div class="text-center md:text-right">
+                                <div class="text-4xl font-bold text-orange-400">🥉</div>
+                                <p class="text-lg text-gray-300 mt-2">Great Achievement</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p class="text-center mt-8 text-white text-lg font-semibold">
-                Get ready! The hackathon begins on <span class="text-cyber-cyan">November 28, 2025 at 08:00 PM [Online]</span>
-            </p>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-300 text-lg">
+                    <i class="fas fa-heart text-red-400 mr-2"></i>
+                    Thank you to all teams for your dedication, creativity, and hard work!
+                </p>
+                <p class="text-cyber-cyan mt-4 font-semibold">
+                    Event Date: November 28-29, 2025
+                </p>
+            </div>
         </div>
     </section>
     
@@ -262,7 +322,7 @@
     </section>
     
     <!-- Image Slider -->
-    <section class="slider-section py-16 md:py-20">
+    <section id="gallery" class="slider-section py-16 md:py-20">
         <div class="container mx-auto px-4">
             <h2 class="section-title text-center mb-12">What's In It For You?</h2>
             <div class="swiper hackathonSwiper">
@@ -367,76 +427,91 @@
     </section>
     
     <!-- Payment Instructions -->
-    <section id="payment" class="payment-section py-16 md:py-20">
+    <!-- Event Highlights -->
+    <section id="highlights" class="highlights-section py-16 md:py-20">
         <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="section-title text-center mb-12">Payment Instructions</h2>
-            <div class="payment-card">
-                <div class="mb-8">
-                    <h3 class="text-2xl font-bold mb-4 text-cyber-cyan">How to Pay</h3>
-                    <ol class="space-y-3 text-gray-200">
-                        <li class="flex items-start">
-                            <span class="text-cyber-cyan font-bold mr-3">1.</span>
-                            <span>Select your preferred payment method (<strong><span style="color: #ff346e;">bKash</span> or <span style="color: #F7941D;">Nagad</span>)</strong></strong></span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-cyber-cyan font-bold mr-3">2.</span>
-                            <span>Send <strong class="text-cyber-cyan">500 BDT</strong> to the provided number</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-cyber-cyan font-bold mr-3">3.</span>
-                            <span>Enter your <strong class="text-cyber-cyan">Team Name in reference </strong></span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-cyber-cyan font-bold mr-3">4.</span>
-                            <span>Save the <strong class="text-cyber-cyan">transaction ID</strong></span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-cyber-cyan font-bold mr-3">5.</span>
-                            <span>Fill the registration form with your payment details</span>
-                        </li>
-                    </ol>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="payment-method-btn bkash-btn relative">
-                        <img src="assets/icons/Bkash.svg" alt="bKash" class="h-12 mb-2" loading="lazy">
-                        <span class="text-xl font-bold">Pay with bKash</span>
-                        <span class="text-lg font-bold" style="color: #ff346e;">Personal: 01953675886</span>
-                        <span id="bkash-copied" class="absolute bottom-3 right-14 bg-cyber-cyan text-cyber-navy px-3 py-1 rounded text-xs font-semibold opacity-0 transition-opacity">Copied!</span>
-                        <button onclick="copyNumber('01953675886', 'bkash')" class="absolute bottom-3 right-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-2 w-10 h-10 flex items-center justify-center transition-all" title="Copy number">
-                            <i class="fas fa-copy text-sm"></i>
-                        </button>
-                    </div>
-                    <div class="payment-method-btn nagad-btn relative">
-                        <img src="assets/icons/Nagad.svg" alt="Nagad" class="h-12 mb-2" loading="lazy">
-                        <span class="text-xl font-bold">Pay with Nagad</span>
-                        <span class="text-lg font-bold" style="color: #F7941D;">Personal: 01953675886</span>
-                        <span id="nagad-copied" class="absolute bottom-3 right-14 bg-cyber-cyan text-cyber-navy px-3 py-1 rounded text-xs font-semibold opacity-0 transition-opacity">Copied!</span>
-                        <button onclick="copyNumber('01953675886', 'nagad')" class="absolute bottom-3 right-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-2 w-10 h-10 flex items-center justify-center transition-all" title="Copy number">
-                            <i class="fas fa-copy text-sm"></i>
-                        </button>
+            <h2 class="section-title text-center mb-12">Event Highlights</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="highlight-card">
+                    <div class="text-center">
+                        <i class="fas fa-users text-cyber-cyan text-5xl mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-2">15</h3>
+                        <p class="text-gray-300">Teams Participated</p>
                     </div>
                 </div>
-                
-                <div class="mt-8 p-4 bg-cyber-blue bg-opacity-30 rounded-lg border border-cyber-cyan border-opacity-30">
-                    <p class="text-sm text-center text-gray-200">
-                        <i class="fas fa-info-circle text-cyber-cyan mr-2"></i>
-                        Please complete the payment before filling out the registration form
-                    </p>
+                <div class="highlight-card">
+                    <div class="text-center">
+                        <i class="fas fa-clock text-cyber-cyan text-5xl mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-2">12</h3>
+                        <p class="text-gray-300">Hours of Hacking</p>
+                    </div>
                 </div>
+                <div class="highlight-card">
+                    <div class="text-center">
+                        <i class="fas fa-trophy text-cyber-cyan text-5xl mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-2">10,000</h3>
+                        <p class="text-gray-300">BDT Prize Pool</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 bg-cyber-blue/30 border-2 border-cyber-cyan/50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-center text-cyber-cyan mb-4">Thank You!</h3>
+                <p class="text-center text-gray-200 leading-relaxed">
+                    The CSE FEST Cyber Security Hackathon 2025 was a tremendous success! We witnessed exceptional talent, innovative solutions, and remarkable dedication from all participating teams. Thank you to everyone who made this event unforgettable.
+                </p>
             </div>
         </div>
     </section>
     
-    <!-- Embedded Google Form -->
-    <section id="register" class="form-section py-8 md:py-12">
+    <!-- Event Recap -->
+    <section id="recap" class="recap-section py-16 md:py-20">
         <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="section-title text-center mb-6">Registration Closed</h2>
-            <div class="max-w-2xl mx-auto bg-cyber-blue/30 border-2 border-cyber-cyan/50 rounded-2xl p-8 text-center">
-                <i class="fas fa-check-circle text-cyber-cyan text-6xl mb-4"></i>
-                <h3 class="text-2xl font-bold mb-4">Registration Successfully Closed!</h3>
-                <p class="text-gray-200 text-lg mb-2">All 15 teams have been filled.</p>
-                <p class="text-gray-300">Thank you to everyone who registered! We look forward to seeing you at the hackathon on November 28-29, 2025.</p>
+            <h2 class="section-title text-center mb-12">Event Recap</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="recap-card">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-cyber-cyan/20 rounded-lg p-4 flex-shrink-0">
+                            <i class="fas fa-calendar-check text-cyber-cyan text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-cyber-cyan mb-2">Two-Day Challenge</h3>
+                            <p class="text-gray-200">Teams worked tirelessly from November 28-29, 2025, tackling the Redaction Challenge with innovative approaches to data privacy and security.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="recap-card">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-cyber-cyan/20 rounded-lg p-4 flex-shrink-0">
+                            <i class="fas fa-code text-cyber-cyan text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-cyber-cyan mb-2">Hybrid Format</h3>
+                            <p class="text-gray-200">Participants built their solutions during the online session and showcased their work in-person at Presidency University for final judging.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="recap-card">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-cyber-cyan/20 rounded-lg p-4 flex-shrink-0">
+                            <i class="fas fa-lightbulb text-cyber-cyan text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-cyber-cyan mb-2">Innovation Unleashed</h3>
+                            <p class="text-gray-200">Teams demonstrated cutting-edge solutions for automated text redaction, balancing privacy protection with information utility.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="recap-card">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-cyber-cyan/20 rounded-lg p-4 flex-shrink-0">
+                            <i class="fas fa-award text-cyber-cyan text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-cyber-cyan mb-2">Outstanding Results</h3>
+                            <p class="text-gray-200">Super Saiyans emerged as champions, with CyberX404 and Team-231 securing runner-up positions through exceptional performances.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -963,7 +1038,7 @@
                     <h4 class="font-bold text-lg mb-4 text-cyber-cyan">Quick Links</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#overview" class="footer-link">Overview</a></li>
-                        <li><a href="#register" class="footer-link">Register</a></li>
+                        <li><a href="#winners" class="footer-link">Winners</a></li>
                         <li><a href="#rules" class="footer-link">Rules</a></li>
                         <li><a href="#faq" class="footer-link">FAQ</a></li>
                     </ul>

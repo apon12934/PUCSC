@@ -141,33 +141,36 @@ const hoursEl = document.getElementById('hours');
 const minutesEl = document.getElementById('minutes');
 const secondsEl = document.getElementById('seconds');
 
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = EVENT_DATE - now;
-    
-    if (distance < 0) {
-        daysEl.innerHTML = '00';
-        hoursEl.innerHTML = '00';
-        minutesEl.innerHTML = '00';
-        secondsEl.innerHTML = '00';
-        return;
+// Only run countdown if elements exist (countdown section may be replaced with winners)
+if (daysEl && hoursEl && minutesEl && secondsEl) {
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = EVENT_DATE - now;
+        
+        if (distance < 0) {
+            daysEl.innerHTML = '00';
+            hoursEl.innerHTML = '00';
+            minutesEl.innerHTML = '00';
+            secondsEl.innerHTML = '00';
+            return;
+        }
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Use innerHTML and force width to prevent reflow
+        daysEl.innerHTML = String(days).padStart(2, '0');
+        hoursEl.innerHTML = String(hours).padStart(2, '0');
+        minutesEl.innerHTML = String(minutes).padStart(2, '0');
+        secondsEl.innerHTML = String(seconds).padStart(2, '0');
     }
-    
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Use innerHTML and force width to prevent reflow
-    daysEl.innerHTML = String(days).padStart(2, '0');
-    hoursEl.innerHTML = String(hours).padStart(2, '0');
-    minutesEl.innerHTML = String(minutes).padStart(2, '0');
-    secondsEl.innerHTML = String(seconds).padStart(2, '0');
-}
 
-// Update countdown every second
-updateCountdown();
-setInterval(updateCountdown, 1000);
+    // Update countdown every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
 
 // ====================================
 // Swiper Slider Initialization
