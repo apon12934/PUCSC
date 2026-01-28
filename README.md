@@ -1,8 +1,11 @@
 <div align="center">
 
-# 🛡️ CSE FEST Cyber Security Hackathon 2025
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=CSE%20FEST%20Cyber%20Security&fontSize=50&fontColor=fff&animation=fadeIn&fontAlignY=35" width="100%"/>
 
-<img src="https://pucsc.netlify.app/assets/logos/pucsc_logo.svg" alt="PUCSC Logo" width="200"/>
+# 🛡️ HACKATHON 2025 🛡️
+
+### 🎓 **Organized by PUCSC** 🎓
+**Presidency University Computer Science Club**
 
 ### 🔐 **Defend · Detect · Dominate** 🔐
 
@@ -197,15 +200,20 @@ Congratulations to our talented winners!
 
 ---
 
-## 📸 **Screenshots**
+## 📸 **Preview**
 
 <div align="center">
 
-### Hero Section
-<img src="https://pucsc.netlify.app/assets/heros/title.svg" alt="Hero Section" width="800"/>
+### 🌐 **Live Website**
 
-### Event Gallery
-*Check out the live website for the full gallery experience!*
+[![Visit Website](https://img.shields.io/badge/🚀_VISIT_LIVE_SITE-Click_Here-00D9FF?style=for-the-badge&logoColor=white&labelColor=0A1628&borderColor=02ABF1)](https://pucsc.netlify.app/)
+
+### ✨ **What You'll See:**
+- 🎯 Eye-catching 3D tech sphere animations
+- 🏆 Animated winner showcases with trophies
+- 🖼️ Interactive event photo gallery
+- 📱 Fully responsive design across all devices
+- 🎨 Stunning cyber-themed gradients and effects
 
 </div>
 
