@@ -6,7 +6,7 @@
 
 ### 🔐 **Defend · Detect · Dominate** 🔐
 
-[![Live Website](https://img.shields.io/badge/🌐_Live_Website-Visit_Now-00D9FF?style=for-the-badge&logoColor=white)](https://pucsc-hackathon.netlify.app/)
+[![Live Website](https://img.shields.io/badge/🌐_Live_Website-Visit_Now-00D9FF?style=for-the-badge&logoColor=white)](https://pucsc.netlify.app/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![Made with Love](https://img.shields.io/badge/Made_with-❤️_&_☕-red?style=for-the-badge)](https://github.com/PUCSC)
 
@@ -230,7 +230,7 @@ tailwind.config = {
 
 ## 🌐 **Deployment**
 
-The website is deployed and live at: **[pucsc-hackathon.netlify.app](https://pucsc-hackathon.netlify.app/)**
+The website is deployed and live at: **[pucsc.netlify.app](https://pucsc.netlify.app/)**
 
 ### Deploy Your Own
 
@@ -301,7 +301,7 @@ Got questions? Reach out to us!
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@pucsc.edu.bd)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/pucsc)
-[![Website](https://img.shields.io/badge/Website-00D9FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pucsc-hackathon.netlify.app/)
+[![Website](https://img.shields.io/badge/Website-00D9FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pucsc.netlify.app/)
 
 </div>
 
