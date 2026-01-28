@@ -132,7 +132,7 @@ PUCSC-Hackathon/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/PUCSC-Hackathon.git
+   git clone https://github.com/apon12934/PUCSC.git
    ```
 
 2. **Navigate to the project directory**
