@@ -2,7 +2,7 @@
 
 # 🛡️ CSE FEST Cyber Security Hackathon 2025
 
-<img src="https://img.shields.io/badge/PUCSC-Presidency_University_CS_Club-00D9FF?style=for-the-badge&logo=shield&logoColor=white&labelColor=070840" alt="PUCSC Logo" width="400"/>
+<img src="https://img.shields.io/badge/PUCSC-Presidency_University_CS_Club-00D9FF?style=for-the-badge&logoColor=white&labelColor=070840" alt="PUCSC Logo" width="400"/>
 
 <br/>
 <br/>
@@ -40,32 +40,7 @@ The hackathon brought together talented teams to compete in solving real-world c
 
 ---
 
-## 🎨 **Features**
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://img.icons8.com/fluency/96/responsive.png" width="60" alt="Responsive"/>
-      <br /><b>Fully Responsive</b>
-      <br />Mobile-first design
-    </td>
-    <td align="center">
-      <img src="https://img.icons8.com/fluency/96/design.png" width="60" alt="Modern UI"/>
-      <br /><b>Modern UI/UX</b>
-      <br />Cyber-themed aesthetics
-    </td>
-    <td align="center">
-      <img src="https://img.icons8.com/fluency/96/speed.png" width="60" alt="Performance"/>
-      <br /><b>High Performance</b>
-      <br />Optimized loading
-    </td>
-    <td align="center">
-      <img src="https://img.icons8.com/fluency/96/animation.png" width="60" alt="Animations"/>
-      <br /><b>Smooth Animations</b>
-      <br />Engaging interactions
-    </td>
-  </tr>
-</table>
 
 ### 🚀 **Key Features**
 
