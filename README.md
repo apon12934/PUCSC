@@ -42,7 +42,7 @@ The hackathon brought together talented teams to compete in solving real-world c
 <table>
   <tr>
     <td align="center">
-      <img src="https://img.icons8.com/fluency/96/responsive.png" width="60" alt="Responsive"/>
+      <img src="https://img.icons8.com/fluency/96/smartphone.png" width="60" alt="Responsive"/>
       <br /><b>Fully Responsive</b>
       <br />Mobile-first design
     </td>
@@ -160,21 +160,7 @@ PUCSC-Hackathon/
 
 ---
 
-## 🎨 **Color Palette**
 
-<div align="center">
-
-| Color Name | Hex Code | Preview |
-|------------|----------|---------|
-| Cyber Navy | `#070840` | ![#070840](https://via.placeholder.com/100x40/070840/070840.png) |
-| Cyber Blue | `#0d2c82` | ![#0d2c82](https://via.placeholder.com/100x40/0d2c82/0d2c82.png) |
-| Cyber Royal | `#227ab7` | ![#227ab7](https://via.placeholder.com/100x40/227ab7/227ab7.png) |
-| Cyber Cyan | `#02abf1` | ![#02abf1](https://via.placeholder.com/100x40/02abf1/02abf1.png) |
-| White | `#FFFFFF` | ![#FFFFFF](https://via.placeholder.com/100x40/FFFFFF/FFFFFF.png) |
-
-</div>
-
----
 
 ## 🏆 **Winners**
 
