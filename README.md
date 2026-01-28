@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=CSE%20FEST%20Cyber%20Security&fontSize=50&fontColor=fff&animation=fadeIn&fontAlignY=35" width="100%"/>
+# 🛡️ CSE FEST Cyber Security Hackathon 2025
 
-# 🛡️ HACKATHON 2025 🛡️
+<img src="https://img.shields.io/badge/PUCSC-Presidency_University_CS_Club-00D9FF?style=for-the-badge&logo=shield&logoColor=white&labelColor=070840" alt="PUCSC Logo" width="400"/>
 
-### 🎓 **Organized by PUCSC** 🎓
-**Presidency University Computer Science Club**
+<br/>
+<br/>
 
 ### 🔐 **Defend · Detect · Dominate** 🔐
 
@@ -163,21 +163,6 @@ PUCSC-Hackathon/
 
 ---
 
-## 🎨 **Color Palette**
-
-<div align="center">
-
-| Color Name | Hex Code | Preview |
-|------------|----------|---------|
-| Cyber Navy | `#070840` | ![#070840](https://via.placeholder.com/100x40/070840/070840.png) |
-| Cyber Blue | `#0d2c82` | ![#0d2c82](https://via.placeholder.com/100x40/0d2c82/0d2c82.png) |
-| Cyber Royal | `#227ab7` | ![#227ab7](https://via.placeholder.com/100x40/227ab7/227ab7.png) |
-| Cyber Cyan | `#02abf1` | ![#02abf1](https://via.placeholder.com/100x40/02abf1/02abf1.png) |
-| White | `#FFFFFF` | ![#FFFFFF](https://via.placeholder.com/100x40/FFFFFF/FFFFFF.png) |
-
-</div>
-
----
 
 ## 🏆 **Winners**
 
